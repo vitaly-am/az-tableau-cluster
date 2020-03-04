@@ -120,6 +120,7 @@ fi
 
 #making bootstrap file and enable sftp
 tsm topology nodes get-bootstrap-file --file /home/${USER}/bootstrap.cfg -u "${USER}" -p "${PASSWORD}"
+chmod 554 /home/${USER}/bootstrap.cfg
 
 # remove all install files
 rm registration.json
