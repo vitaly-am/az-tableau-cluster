@@ -5,7 +5,7 @@ tsm_admin_pass=$2
 primary_dns=$3
 INSTALL_SCRIPT_URL=$4
 
-yum -y install sshpass
+sudo yum -y install sshpass
 
 cd /tmp
 
