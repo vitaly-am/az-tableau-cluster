@@ -120,7 +120,7 @@ then
 fi
 
 #making bootstrap file and enable sftp
-sudo tsm topology nodes get-bootstrap-file --file /home/$USER/bootstrap.cfg -u $USER -p $PASSWORD
+tsm topology nodes get-bootstrap-file --file /home/$USER/bootstrap.cfg -u $USER -p $PASSWORD
 chmod 554 /home/$USER/bootstrap.cfg
 
 # remove all install files
