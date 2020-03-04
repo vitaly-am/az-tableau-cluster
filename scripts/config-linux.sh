@@ -124,6 +124,9 @@ tsm topology nodes get-bootstrap-file --file /home/${USER}/bootstrap.cfg -u "${U
 chmod 554 /home/${USER}/bootstrap.cfg
 
 # remove all install files
+cp secrets /home/${USER}/secrets
+chmod 554 /home/${USER}/secrets
+
 rm registration.json
 rm secrets
 if [ "$OS" == "RHEL 7.6" ] || [ "$OS" == "CentOS 7.5" ]
