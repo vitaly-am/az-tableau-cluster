@@ -119,13 +119,13 @@ then
 fi
 
 #making bootstrap file and enable sftp
-mkdir /restricted
-chown root:root /restricted
-chmod 551 /restricted
-sed -i.bak -e 's:Subsystem\\s\\+sftp\\s\\+/usr/libexec/openssh/sftp-server:Subsystem sftp  internal-sftp:' /etc/ssh/sshd_config
-printf \"\\nMatch User \"$USER\"\\n  ForceCommand internal-sftp\\n  ChrootDirectory /restricted\\n  PasswordAuthentication yes\\n  AllowTcpForwarding no\\n  PermitTunnel no\\n  X11Forwarding no\\n\" >> /etc/ssh/sshd_config
-service sshd restart
-tsm topology nodes get-bootstrap-file --file bootstrap.cfg -u "$USER" -p "$PASSWORD" & mv bootstrap.cfg /restricted/
+#mkdir /restricted
+#chown root:root /restricted
+#chmod 551 /restricted
+#sed -i.bak -e 's:Subsystem\\s\\+sftp\\s\\+/usr/libexec/openssh/sftp-server:Subsystem sftp  internal-sftp:' /etc/ssh/sshd_config
+#printf \"\\nMatch User \"$USER\"\\n  ForceCommand internal-sftp\\n  ChrootDirectory /restricted\\n  PasswordAuthentication yes\\n  AllowTcpForwarding no\\n  PermitTunnel no\\n  X11Forwarding no\\n\" >> /etc/ssh/sshd_config
+#service sshd restart
+#tsm topology nodes get-bootstrap-file --file bootstrap.cfg -u "$USER" -p "$PASSWORD" & mv bootstrap.cfg /restricted/
 
 # remove all install files
 rm registration.json
