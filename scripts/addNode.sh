@@ -21,4 +21,4 @@ wget --tries=3 --output-document=tableau-installer.rpm https://downloads.tableau
 wget --remote-encoding=UTF-8 --output-document=automated-installer.sh $INSTALL_SCRIPT_URL
 chmod +x automated-installer.sh
 #installation
-sudo ./automated-installer.sh -a $tsm_admin_user -f /dev/zero -r /dev/zero -b bootstrap.cfg  -s secrets -v --accepteula --force /tmp/tableau-installer.rpm
+sudo ./automated-installer.sh -a $tsm_admin_user -f /dev/zero -r /dev/zero -b bootstrap.cfg -s secrets -v --accepteula --force /tmp/tableau-installer.rpm
