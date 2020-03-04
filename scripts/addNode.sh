@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 tsm_admin_user = $1
 tsm_admin_pass = $2
