@@ -9,7 +9,7 @@ sudo yum -y install sshpass
 
 cd /tmp
 
-yes |sshpass -p "${tsm_admin_pass}" scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./bootstrap.cfg /tmp/
+yes | sshpass -p "${tsm_admin_pass}" scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./bootstrap.cfg /tmp/
 yes | sshpass -p "${tsm_admin_pass}" scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./secrets /tmp/secrets
 
 # download distr
