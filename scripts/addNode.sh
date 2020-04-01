@@ -9,8 +9,8 @@ sudo yum -y install sshpass
 
 cd /tmp
 
-yes | sshpass -p "${tsm_admin_pass}" scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./bootstrap.cfg /tmp/
-yes | sshpass -p "${tsm_admin_pass}" scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./secrets /tmp/secrets
+sshpass -p ${tsm_admin_pass} scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./bootstrap.cfg /tmp/
+sshpass -p ${tsm_admin_pass} scp -v -o StrictHostKeyChecking=no $tsm_admin_user@$primary_dns:./secrets /tmp/
 
 # download distr
 wget --tries=3 --output-document=tableau-installer.rpm https://downloads.tableau.com/esdalt/2020.1.0/tableau-server-2020-1-0.x86_64.rpm
